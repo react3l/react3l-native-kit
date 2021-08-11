@@ -9,13 +9,40 @@
     "start": "react-native start"
   },
   "dependencies": {
+    "@react-native-masked-view/masked-view": "^0.2.6",
+    "@react-navigation/bottom-tabs": "^6.0.2",
+    "@react-navigation/drawer": "^6.1.0",
+    "@react-navigation/native": "^6.0.2",
+    "@react-navigation/stack": "^6.0.3",
     "react": "16.13.1",
-    "react-native": "0.63.4"
+    "react-native": "0.63.4",
+    "react-native-atomic-styles": "^0.0.1-rc.8",
+    "react-native-calendar-picker": "^7.1.2",
+    "react-native-dash": "^0.0.11",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-modal": "^12.0.3",
+    "react-native-paper": "^4.9.2",
+    "react-native-reanimated": "^2.2.0",
+    "react-native-safe-area-context": "^3.3.0",
+    "react-native-screens": "^3.5.0",
+    "react-native-svg": "^12.1.1",
+    "react-native-text-gradient": "^0.1.7",
+    "react-native-vector-icons": "^8.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/runtime": "^7.12.5",
+    "babel-plugin-macros": "^3.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
-    "metro-react-native-babel-preset": "^0.64.0"
+    "metro-react-native-babel-preset": "^0.64.0",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.6",
+    "react-native-css-module": "thanhtunguet/react-native-css-module",
+    "react-native-postcss-transformer": "^1.2.4",
+    "react-native-sass-transformer": "^1.4.0",
+    "react-native-svg-transformer": "^0.14.3",
+    "react-native-svg-types": "thanhtunguet/react-native-svg-types",
+    "ts-nameof.macro": "^4.2.2"
   }
 }
