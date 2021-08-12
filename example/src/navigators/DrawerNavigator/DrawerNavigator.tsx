@@ -7,6 +7,7 @@ import HomeScreen from 'example/src/screens/HomeScreen/HomeScreen';
 import DatePickerScreen from '../../screens/DatePickerScreen/DatePickerScreen';
 import TextInputScreen from '../../screens/TextInputScreen/TextInputScreen';
 import BottomSheetScreen from '../../screens/BottomSheetScreen/BottomSheetScreen';
+import DropdownScreen from '../../screens/DropdownScreen/DropdownScreen';
 
 const { Navigator, Screen } = createDrawerNavigator();
 
@@ -20,15 +21,19 @@ const DrawerNavigator: FC<PropsWithChildren<DrawerNavigatorProps>> =
   (): ReactElement => {
     return (
       <Navigator initialRouteName={HomeScreen.displayName!}>
-        {[HomeScreen, DatePickerScreen, TextInputScreen, BottomSheetScreen].map(
-          (ScreenComponent) => (
-            <Screen
-              key={ScreenComponent.displayName!}
-              name={ScreenComponent.displayName!}
-              component={ScreenComponent}
-            />
-          )
-        )}
+        {[
+          HomeScreen,
+          DatePickerScreen,
+          TextInputScreen,
+          BottomSheetScreen,
+          DropdownScreen,
+        ].map((ScreenComponent) => (
+          <Screen
+            key={ScreenComponent.displayName!}
+            name={ScreenComponent.displayName!}
+            component={ScreenComponent}
+          />
+        ))}
       </Navigator>
     );
   };

@@ -36,6 +36,8 @@ project.xcworkspace
 local.properties
 android.iml
 
+release/
+
 # Cocoapods
 #
 example/ios/Pods
