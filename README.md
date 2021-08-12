@@ -1,11 +1,11 @@
-# react-native-react3l-native-kit
+# react3l-native-kit
 
 React3L Kit for React Native
 
 ## Installation
 
 ```sh
-npm install react-native-react3l-native-kit
+npm install react3l-native-kit
 ```
 
 ## Usage
