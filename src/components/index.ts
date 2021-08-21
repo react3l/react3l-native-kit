@@ -4,6 +4,8 @@ import type { DatePickerProps } from './DatePicker/DatePicker';
 import DatePicker from './DatePicker/DatePicker';
 import type { DropdownProps } from './Dropdown/Dropdown';
 import Dropdown from './Dropdown/Dropdown';
+import type { MultiselectDropdownProps } from './MultiselectDropdown/MultiselectDropdown';
+import MultiselectDropdown from './MultiselectDropdown/MultiselectDropdown';
 import type { SvgIconProps } from './SvgIcon/SvgIcon';
 import SvgIcon from './SvgIcon/SvgIcon';
 import type { TextInputProps } from './TextInput/TextInput';
@@ -15,9 +17,18 @@ export type {
   BottomSheetProps,
   DatePickerProps,
   DropdownProps,
+  MultiselectDropdownProps,
   SvgIconProps,
   TextGradientProps,
   TextInputProps,
 };
 
-export { BottomSheet, DatePicker, Dropdown, SvgIcon, TextGradient, TextInput };
+export {
+  BottomSheet,
+  DatePicker,
+  Dropdown,
+  MultiselectDropdown,
+  SvgIcon,
+  TextGradient,
+  TextInput,
+};

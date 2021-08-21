@@ -187,7 +187,7 @@ PODS:
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
   - React-jsinspector (0.63.4)
-  - react-native-react3l-native-kit (0.1.0):
+  - react-native-react3l-native-kit (0.1.0-rc.1):
     - React-Core
   - react-native-safe-area-context (3.3.0):
     - React-Core
@@ -436,7 +436,7 @@ SPEC CHECKSUMS:
   React-jsi: a0418934cf48f25b485631deb27c64dc40fb4c31
   React-jsiexecutor: 93bd528844ad21dc07aab1c67cb10abae6df6949
   React-jsinspector: 58aef7155bc9a9683f5b60b35eccea8722a4f53a
-  react-native-react3l-native-kit: 25df9b3c6fe308b49e2d3c02b93f2120e56d87e3
+  react-native-react3l-native-kit: 3f69f0e450f4024c979664c7eb15c2d7f3a421e8
   react-native-safe-area-context: 61c8c484a3a9e7d1fda19f7b1794b35bbfd2262a
   React-RCTActionSheet: 89a0ca9f4a06c1f93c26067af074ccdce0f40336
   React-RCTAnimation: 1bde3ecc0c104c55df246eda516e0deb03c4e49b
@@ -460,4 +460,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 76acebb72fc3dad8122b27572e77232fad2f78dc
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2
