@@ -74,6 +74,7 @@ const MultiselectDropdown: MultiselectDropdownComponent =
     }, [maxHeight]);
 
     const [dropdown, setIsDropdown] = React.useState<boolean>(false);
+    const [modal, setIsModal] = React.useState<boolean>(false);
 
     const [layout, setLayout] = React.useState<LayoutRectangle>();
 
@@ -85,10 +86,17 @@ const MultiselectDropdown: MultiselectDropdownComponent =
 
     const handleOpenDropdown = React.useCallback(() => {
       setIsDropdown(true);
+      setIsModal(true);
     }, []);
 
     const handleClosetDropdown = React.useCallback(() => {
       setIsDropdown(false);
+      const timer = setTimeout(async () => {
+        await setIsModal(false);
+      }, 500);
+      return () => {
+        clearTimeout(timer);
+      };
     }, []);
 
     return (
@@ -133,7 +141,7 @@ const MultiselectDropdown: MultiselectDropdownComponent =
           </View>
         </View>
         <Modal
-          visible={dropdown}
+          visible={modal}
           transparent={true}
           animationType={'none'}
           presentationStyle={'overFullScreen'}

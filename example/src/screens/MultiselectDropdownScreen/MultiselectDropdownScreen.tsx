@@ -88,6 +88,7 @@ const MultiselectDropdownScreen: FC<
       <MultiselectDropdown
         selectedData={selected}
         data={list}
+        maxHeight={300}
         renderItem={(isSelected) =>
           ({ item, index }: ListRenderItemInfo<any>) => {
             return !isSelected ? (
