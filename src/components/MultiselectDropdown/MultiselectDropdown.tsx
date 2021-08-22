@@ -27,17 +27,11 @@ type MultiselectDropdownComponent<T = any> = FC<
   PropsWithChildren<MultiselectDropdownProps<T>>
 >;
 
-export interface ItemSelected {
-  name: string;
-}
+const { width: windowWidth, height: windowHeight } = Dimensions.get('window');
 
-const windowWidth = Dimensions.get('window').width;
+const MIN_DISTANCE = 0;
 
-const windowHeight = Dimensions.get('window').height;
-
-const zero = 0;
-
-const maxWidthTitle = 90;
+const MAX_WIDTH_TITLE = 90;
 
 const MultiselectDropdown: MultiselectDropdownComponent =
   function MultiselectDropdown<T>(
@@ -49,7 +43,6 @@ const MultiselectDropdown: MultiselectDropdownComponent =
       renderItem,
       data,
       selectedData,
-      renderItemSelected,
       maxHeight,
       style,
       selectedViewStyle,
@@ -80,7 +73,7 @@ const MultiselectDropdown: MultiselectDropdownComponent =
       };
     }, [maxHeight]);
 
-    const [dropDown, isDropdown] = React.useState<boolean>(false);
+    const [dropdown, setIsDropdown] = React.useState<boolean>(false);
 
     const [layout, setLayout] = React.useState<LayoutRectangle>();
 
@@ -91,11 +84,11 @@ const MultiselectDropdown: MultiselectDropdownComponent =
     }, []);
 
     const handleOpenDropdown = React.useCallback(() => {
-      isDropdown(true);
+      setIsDropdown(true);
     }, []);
 
     const handleClosetDropdown = React.useCallback(() => {
-      isDropdown(false);
+      setIsDropdown(false);
     }, []);
 
     return (
@@ -115,7 +108,7 @@ const MultiselectDropdown: MultiselectDropdownComponent =
             style={[
               atomicStyles.text,
               styles.textValue,
-              { maxWidth: maxWidthTitle },
+              { maxWidth: MAX_WIDTH_TITLE },
               textInputStyle,
             ]}
           >
@@ -128,25 +121,25 @@ const MultiselectDropdown: MultiselectDropdownComponent =
               showsHorizontalScrollIndicator={false}
               horizontal
               data={selectedData}
-              renderItem={renderItemSelected}
+              renderItem={renderItem ? renderItem(true) : undefined}
               style={{ transform: [{ scaleX: -1 }] }}
             />
             <TouchableOpacity
               onPress={handleOpenDropdown}
               style={[atomicStyles.pl4]}
             >
-              {icon && icon(dropDown)}
+              {icon && icon(dropdown)}
             </TouchableOpacity>
           </View>
         </View>
         <Modal
-          visible={dropDown}
+          visible={dropdown}
           transparent={true}
           animationType={'none'}
           presentationStyle={'overFullScreen'}
         >
           <Animatable.View
-            animation={dropDown ? slideInDown : slideInUp}
+            animation={dropdown ? slideInDown : slideInUp}
             style={[
               {
                 top: layout
@@ -154,9 +147,9 @@ const MultiselectDropdown: MultiselectDropdownComponent =
                     layout?.height +
                     StatusBar.currentHeight! +
                     top * 2
-                  : zero,
+                  : MIN_DISTANCE,
                 width: layout ? layout.width : windowWidth,
-                left: layout ? (windowWidth - layout.width) / 2 : zero,
+                left: layout ? (windowWidth - layout.width) / 2 : MIN_DISTANCE,
               },
             ]}
           >
@@ -172,11 +165,11 @@ const MultiselectDropdown: MultiselectDropdownComponent =
                 keyExtractor={(_item, index) => index.toString()}
                 showsVerticalScrollIndicator={false}
                 data={data}
-                renderItem={renderItem}
+                renderItem={renderItem ? renderItem(false) : undefined}
               />
             </View>
           </Animatable.View>
-          {dropDown && (
+          {dropdown && (
             <TouchableOpacity
               onPress={handleClosetDropdown}
               style={[
@@ -199,11 +192,9 @@ export interface MultiselectDropdownProps<T = any> {
 
   textInputStyle?: StyleProp<T>;
 
-  renderItem: ListRenderItem<T> | null | undefined;
+  renderItem: (selected: boolean) => ListRenderItem<T> | null;
 
-  renderItemSelected: ListRenderItem<T> | null | undefined;
-
-  data: ReadonlyArray<T> | null | undefined;
+  data: ReadonlyArray<T> | null;
 
   selectedData: T[];
 

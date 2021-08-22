@@ -87,28 +87,26 @@ const MultiselectDropdownScreen: FC<
     <View style={[styles.container]}>
       <MultiselectDropdown
         selectedData={selected}
-        renderItemSelected={({ item, index }: ListRenderItemInfo<any>) => {
-          return (
-            <View key={index} style={styles.itemSelectedView}>
-              <Text>{item.name}</Text>
-            </View>
-          );
-        }}
         data={list}
-        renderItem={({ item, index }: ListRenderItemInfo<any>) => {
-          return (
-            <TouchableOpacity
-              style={[
-                styles.item,
-                selected.includes(item) && styles.itemActive,
-              ]}
-              onPress={handleSelected(item)}
-              key={index}
-            >
-              <Text>{item.name}</Text>
-            </TouchableOpacity>
-          );
-        }}
+        renderItem={(isSelected) =>
+          ({ item, index }: ListRenderItemInfo<any>) => {
+            return !isSelected ? (
+              <TouchableOpacity
+                style={[
+                  styles.item,
+                  selected.includes(item) && styles.itemActive,
+                ]}
+                onPress={handleSelected(item)}
+                key={index}
+              >
+                <Text>{item.name}</Text>
+              </TouchableOpacity>
+            ) : (
+              <View key={index} style={styles.itemSelectedView}>
+                <Text>{item.name}</Text>
+              </View>
+            );
+          }}
       />
     </View>
   );
