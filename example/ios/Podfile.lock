@@ -241,7 +241,7 @@ PODS:
     - React-Core/RCTVibrationHeaders (= 0.63.4)
     - React-jsi (= 0.63.4)
     - ReactCommon/turbomodule/core (= 0.63.4)
-  - react3l-native-kit (0.1.0-rc.1):
+  - react3l-native-kit (0.1.0-rc.2):
     - React-Core
   - ReactCommon/turbomodule/core (0.63.4):
     - DoubleConversion
@@ -446,7 +446,7 @@ SPEC CHECKSUMS:
   React-RCTSettings: 60f0691bba2074ef394f95d4c2265ec284e0a46a
   React-RCTText: 5c51df3f08cb9dedc6e790161195d12bac06101c
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
-  react3l-native-kit: fb072372f2e7a52d70b15c6264d65a925fc42b36
+  react3l-native-kit: 0942f516f37a6773a11d2360b916dd56a9f14627
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
   RNCMaskedView: c298b644a10c0c142055b3ae24d83879ecb13ccd
   RNCPicker: 28e41a58b79cd82cc639391bb99ca1b2489a3ea9
@@ -460,4 +460,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: e6c7b5df647f24ff2da8aa1e1b0f1f49414b0584
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
