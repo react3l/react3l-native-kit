@@ -43,6 +43,7 @@ const BottomSheetScreen: FC<PropsWithChildren<BottomSheetScreenProps>> =
             contentContainerStyle: [atomicStyles.p2],
           }}
           rightIcon={<Feather name="x" size={24} color="white" />}
+          onRightIconPress={onBackPress}
         >
           <Text style={[atomicStyles.text]}>
             Content inside bottom sheet is scrollable

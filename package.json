@@ -1,6 +1,6 @@
 {
   "name": "react3l-native-kit",
-  "version": "0.1.0-rc.2",
+  "version": "0.1.0-rc.3",
   "description": "React3L Kit for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

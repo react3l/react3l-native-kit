@@ -8,6 +8,7 @@ import DatePickerScreen from '../../screens/DatePickerScreen/DatePickerScreen';
 import TextInputScreen from '../../screens/TextInputScreen/TextInputScreen';
 import BottomSheetScreen from '../../screens/BottomSheetScreen/BottomSheetScreen';
 import DropdownScreen from '../../screens/DropdownScreen/DropdownScreen';
+import ConfirmationScreen from 'example/src/screens/ConfirmationScreen/ConfirmationScreen';
 
 const { Navigator, Screen } = createDrawerNavigator();
 
@@ -22,11 +23,12 @@ const DrawerNavigator: FC<PropsWithChildren<DrawerNavigatorProps>> =
     return (
       <Navigator initialRouteName={HomeScreen.displayName!}>
         {[
-          HomeScreen,
-          DatePickerScreen,
-          TextInputScreen,
           BottomSheetScreen,
+          ConfirmationScreen,
+          DatePickerScreen,
           DropdownScreen,
+          HomeScreen,
+          TextInputScreen,
         ].map((ScreenComponent) => (
           <Screen
             key={ScreenComponent.displayName!}
