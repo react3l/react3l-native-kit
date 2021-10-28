@@ -8,6 +8,7 @@ import DatePickerScreen from '../../screens/DatePickerScreen/DatePickerScreen';
 import TextInputScreen from '../../screens/TextInputScreen/TextInputScreen';
 import BottomSheetScreen from '../../screens/BottomSheetScreen/BottomSheetScreen';
 import DropdownScreen from '../../screens/DropdownScreen/DropdownScreen';
+import MultiselectDropdownScreen from '../../screens/MultiselectDropdownScreen/MultiselectDropdownScreen';
 import ConfirmationScreen from 'example/src/screens/ConfirmationScreen/ConfirmationScreen';
 
 const { Navigator, Screen } = createDrawerNavigator();
@@ -27,6 +28,7 @@ const DrawerNavigator: FC<PropsWithChildren<DrawerNavigatorProps>> =
           ConfirmationScreen,
           DatePickerScreen,
           DropdownScreen,
+          MultiselectDropdownScreen,
           HomeScreen,
           TextInputScreen,
         ].map((ScreenComponent) => (

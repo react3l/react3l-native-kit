@@ -1,0 +1,41 @@
+/**
+ * Styles for Component.tsx
+ * @created 2021-08-20 09:35:21
+ * @author tientv <tientv20@fpt.com.vn>
+ */
+.containerView {
+  border: 1px solid #EDEDED;
+  box-sizing: border-box;
+  border-radius: 5px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.textValue {
+  font-size: 15px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #A7A7A7;
+}
+
+.valueView {
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+}
+
+.backDrop {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.dropdownView {
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.RTLContainer {
+  flex-direction: row-reverse;
+}
