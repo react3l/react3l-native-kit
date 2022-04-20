@@ -41,13 +41,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/thanhtunguet/react3l-native-kit",
-  "author": "thanhtunguet <thanhtung.uet@gmail.com> (https://github.com/thanhtunguet)",
+  "repository": "https://github.com/react3l/react3l-native-kit",
+  "author": "thanhtunguet <thanhtung.uet@gmail.com> (https://github.com/react3l)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thanhtunguet/react3l-native-kit/issues"
+    "url": "https://github.com/react3l/react3l-native-kit/issues"
   },
-  "homepage": "https://github.com/thanhtunguet/react3l-native-kit#readme",
+  "homepage": "https://github.com/react3l/react3l-native-kit#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
