@@ -1,0 +1,47 @@
+.text {
+  font-family: map-get($map: $font-families, $key: regular);
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+  font-family: map-get($map: $font-families, $key: bold);
+}
+
+.semibold {
+  font-weight: 600;
+  font-family: map-get($map: $font-families, $key: semibold);
+}
+
+.light {
+  font-weight: 300;
+  font-family: map-get($map: $font-families, $key: light);
+}
+
+.medium {
+  font-weight: 500;
+  font-family: map-get($map: $font-families, $key: medium);
+}
+
+.textUppercase {
+  text-transform: uppercase;
+}
+
+.textLowercase {
+  text-transform: lowercase;
+}

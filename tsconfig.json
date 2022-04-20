@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react3l-native-kit": ["./src/index"]
+      "react3l-native-kit": [
+        "./src/index"
+      ]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
@@ -10,8 +12,10 @@
     "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
-    "lib": ["esnext"],
-    "module": "esnext",
+    "lib": [
+      "ESNext"
+    ],
+    "module": "ESNext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -22,6 +26,16 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "ESNext",
+    "typeRoots": [
+      "node_modules/@types/"
+    ],
+    "types": [
+      "react-native-css-module",
+      "react-native-svg-types",
+      "jest",
+      "react",
+      "react-native"
+    ]
   }
 }

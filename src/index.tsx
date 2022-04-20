@@ -6,7 +6,9 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo managed workflow\n';
 
-const React3lNativeKit = NativeModules.React3lNativeKit
+abstract class React3lNativeKitModule {}
+
+const React3lNativeKit: React3lNativeKitModule = NativeModules.React3lNativeKit
   ? NativeModules.React3lNativeKit
   : new Proxy(
       {},
@@ -17,6 +19,6 @@ const React3lNativeKit = NativeModules.React3lNativeKit
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return React3lNativeKit.multiply(a, b);
-}
+Object.setPrototypeOf(React3lNativeKit, React3lNativeKitModule.prototype);
+
+export default React3lNativeKit;

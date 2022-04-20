@@ -1,0 +1,11 @@
+@for $i from 2 through 18 {
+  .radius#{$i * 2} {
+    border-radius: $i * 2px;
+  }
+}
+
+@for $i from 1 through 2 {
+  .radius#{$i * 5} {
+    border-radius: $i * 5px;
+  }
+}
