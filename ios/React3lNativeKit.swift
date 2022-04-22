@@ -1,5 +1,4 @@
-@objc(React3lNativeKit)
-class React3lNativeKit: NSObject {
+extension React3lNativeKit {
 
     @objc(multiply:withB:withResolver:withRejecter:)
     func multiply(a: Float, b: Float, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {

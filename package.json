@@ -53,7 +53,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
-    "commander": "^9.2.0",
+    "react-native-modal": "^13.0.1",
+    "react-native-svg": "^12.3.0",
     "react-redux": "^8.0.0",
     "redux": "^4.2.0"
   },
@@ -64,6 +65,7 @@
     "@types/jest": "^26.0.0",
     "@types/react": "^16.9.19",
     "@types/react-native": "0.62.13",
+    "commander": "^9.2.0",
     "commitlint": "^11.0.0",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^7.0.0",

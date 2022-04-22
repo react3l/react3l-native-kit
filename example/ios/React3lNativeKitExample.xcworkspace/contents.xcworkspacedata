@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../ios/React3lNativeKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:React3lNativeKitExample.xcodeproj">
    </FileRef>
    <FileRef

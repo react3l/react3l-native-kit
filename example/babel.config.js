@@ -9,9 +9,11 @@ module.exports = {
       {
         extensions: ['.tsx', '.ts', '.js', '.json'],
         alias: {
+          example: path.resolve(__dirname),
           [pak.name]: path.join(__dirname, '..', pak.source),
         },
       },
     ],
+    ['macros'],
   ],
 };

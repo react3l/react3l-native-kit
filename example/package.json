@@ -9,13 +9,33 @@
     "start": "react-native start"
   },
   "dependencies": {
-    "react": "16.13.1",
-    "react-native": "0.63.4"
+    "@react-navigation/bottom-tabs": "^6.3.1",
+    "@react-navigation/native": "^6.0.10",
+    "@react-navigation/stack": "^6.2.1",
+    "@reduxjs/toolkit": "^1.8.1",
+    "react": "17.0.1",
+    "react-native": "0.64.2",
+    "react-native-gesture-handler": "^2.4.1",
+    "react-native-paper": "^4.12.0",
+    "react-native-reanimated": "^2.7.0",
+    "react-native-safe-area-context": "^4.2.4",
+    "react-native-screens": "^3.13.1",
+    "react-native-vector-icons": "^9.1.0",
+    "react-redux": "^8.0.0",
+    "redux": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/runtime": "^7.12.5",
-    "babel-plugin-module-resolver": "^4.0.0",
-    "metro-react-native-babel-preset": "^0.64.0"
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "metro-react-native-babel-preset": "^0.64.0",
+    "postcss": "^8.4.12",
+    "postcss-variables": "^1.1.1",
+    "react-native-postcss-transformer": "^1.2.4",
+    "react-native-sass-transformer": "^2.0.0",
+    "react-native-svg-transformer": "^1.0.0",
+    "sass": "^1.50.1",
+    "ts-nameof.macro": "^4.2.2"
   }
 }

@@ -1,24 +1,24 @@
 package com.react3lnativekit
 
+import android.view.WindowManager
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import com.facebook.react.bridge.Promise
 
 class React3lNativeKitModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
+  override fun getName(): String {
+    return "React3lNativeKit"
+  }
 
-    override fun getName(): String {
-        return "React3lNativeKit"
-    }
+  @ReactMethod
+  fun activate() {
+    val activity = currentActivity
+    activity?.runOnUiThread { activity.window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) }
+  }
 
-    // Example method
-    // See https://reactnative.dev/docs/native-modules-android
-    @ReactMethod
-    fun multiply(a: Int, b: Int, promise: Promise) {
-    
-      promise.resolve(a * b)
-    
-    }
-
-    
+  @ReactMethod
+  fun deactivate() {
+    val activity = currentActivity
+    activity?.runOnUiThread { activity.window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) }
+  }
 }

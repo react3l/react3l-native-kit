@@ -11,6 +11,14 @@ function pascalCase(value) {
   return result.charAt(0).toUpperCase() + result.substr(1);
 }
 
+async function sleep(time) {
+  await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  });
+}
+
 program
   .version(version)
   .command('sync:colors <input> [output]')
@@ -21,11 +29,7 @@ program
       src: input,
       dest: temp,
     });
-    await new Promise((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, options.timeout);
-    });
+    await sleep(options.timeout);
     const content = JSON.parse(fs.readFileSync(temp, 'utf-8'));
     const {
       context: {
