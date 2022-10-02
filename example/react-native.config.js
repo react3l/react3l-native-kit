@@ -1,11 +1,9 @@
-/**
- * @format
- */
+const path = require('path');
 
 module.exports = {
-  project: {
-    ios: {},
-    android: {},
+  dependencies: {
+    'react3l-native-kit': {
+      root: path.join(__dirname, '..'),
+    },
   },
-  assets: ['./assets/fonts/'],
 };
